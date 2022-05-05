@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## v1.5.1
+
+May 2022.
+
+* Solves a bug introduced in v1.5.0 causing the reconnect process to survive
+  if the client is stopped while attempting to reconnect.
+
+* Drops the spawned process used for reconnecting. Instead, the reconnect
+  attempts are scheduled using timers.
+
+  The option `reconnect_sleep` now applies to the time between a
+  successful connect and the first reconnect attemt, if the connection is lost
+  just after connecting. However, there is no delay before reconnecting
+  if the connection has been up for at least `reconnect_sleep' milliseconds.
+
 ## v1.5.0
 
 May 2022.
