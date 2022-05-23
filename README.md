@@ -36,7 +36,7 @@ If you have Redis running on localhost with default settings, like:
 
 you may copy and paste the following into a shell to try out Eredis:
 
-    git clone git://github.com/Nordix/eredis.git
+    git clone https://github.com/Nordix/eredis.git
     cd eredis
     rebar3 shell
     {ok, C} = eredis:start_link().
